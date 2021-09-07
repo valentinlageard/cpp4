@@ -20,6 +20,9 @@ Dog::~Dog() {
 }
 
 Dog & Dog::operator=(Dog const & rhs) {
+	if (this == &rhs) {
+		return *this;
+	}
 	type = rhs.type;
 	delete _brain;
 	_brain = new Brain(*rhs._brain);

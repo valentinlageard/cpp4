@@ -18,6 +18,9 @@ Cat::~Cat() {
 
 
 Cat & Cat::operator=(Cat const & rhs) {
+	if (this == &rhs) {
+		return *this;
+	}
 	type = rhs.type;
 	return *this;
 }

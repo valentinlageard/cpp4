@@ -18,6 +18,9 @@ Dog::~Dog() {
 
 
 Dog & Dog::operator=(Dog const & rhs) {
+	if (this == &rhs) {
+		return *this;
+	}
 	type = rhs.type;
 	return *this;
 }
